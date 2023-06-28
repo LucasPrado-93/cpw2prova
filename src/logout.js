@@ -7,6 +7,9 @@ auth
   .signOut()
   .then(() => {
     localStorage.removeItem('token')
-    window.location.href = 'login.html'
+    setTimeout(() => {
+      window.location.href = 'login.html'
+    }, 1200);
+    
   })
   .catch((error) => console.log(error))
